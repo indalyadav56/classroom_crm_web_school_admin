@@ -12,24 +12,61 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useState } from "react";
+import Sidebar from "@/components/SideBar";
+import {
+  AlertCircle,
+  Archive,
+  ArchiveX,
+  File,
+  Inbox,
+  MessagesSquare,
+  Search,
+  Send,
+  ShoppingCart,
+  Trash2,
+  Users2,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <main className="flex h-screen w-screen overflow-hidden bg-slate-600">
       {/* sidebar */}
-      <div className="h-full w-64 border-r-4">
+      <Sidebar
+        isCollapsed={false}
+        links={[
+          {
+            title: "Inbox",
+            label: "128",
+            icon: Inbox,
+            variant: "default",
+          },
+        ]}
+      />
+
+      {/* <div className="h-full w-64 border-r-4">
         <div className="flex-1">
-          <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+          <nav className="space-y-1">
             <Link
               href="#"
               className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
             >
-              Schools
+              Teachers
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
+            >
+              Students
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
+            >
+              Parents
             </Link>
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* right section */}
       <div className="flex h-full w-full flex-1 items-center justify-center">

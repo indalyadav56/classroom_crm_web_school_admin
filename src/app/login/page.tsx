@@ -1,10 +1,5 @@
 import LoginForm from "@/components/LoginForm";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const page = () => {
   return (
