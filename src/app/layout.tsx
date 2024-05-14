@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import Sidebar from "@/components/SideBar";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,15 +19,75 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {" "}
+      <body
+        className={`${inter.className} w-screen h-screen flex overflow-hidden m-0 p-0`}
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <>
+            <Sidebar
+              isCollapsed={false}
+              links={[
+                {
+                  title: "Dashboard",
+                  href: "/",
+                },
+                {
+                  title: "Students",
+                  href: "/students",
+                },
+                {
+                  title: "Parents",
+                  href: "/parents",
+                },
+                {
+                  title: "Teachers",
+                  href: "/teachers",
+                },
+                {
+                  title: "TimeTable",
+                  href: "/teachers",
+                },
+                {
+                  title: "Assignments",
+                  href: "/assignments",
+                },
+                {
+                  title: "Classes",
+                  href: "/classes",
+                },
+                {
+                  title: "Subjects",
+                  href: "/subjects",
+                },
+                {
+                  title: "Exam",
+                  href: "/exam",
+                },
+                {
+                  title: "Result",
+                  href: "/result",
+                },
+                {
+                  title: "Certificates",
+                  href: "/certificates",
+                },
+                {
+                  title: "Notes",
+                  href: "/notes",
+                },
+                {
+                  title: "Settings",
+                  href: "/notes",
+                },
+              ]}
+            />
+            {children}
+          </>
         </ThemeProvider>
       </body>
     </html>
