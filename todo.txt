@@ -1,0 +1,6 @@
+teacher and student can login in school create subdomain website.
+
+
+only school admin can login in classroomcrm.com and manage school related all things and websites theme
+
+

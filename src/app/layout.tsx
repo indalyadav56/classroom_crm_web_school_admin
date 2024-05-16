@@ -41,6 +41,10 @@ export default function RootLayout({
                   href: "/students",
                 },
                 {
+                  title: "Attandences",
+                  href: "/attendences",
+                },
+                {
                   title: "Parents",
                   href: "/parents",
                 },
@@ -49,8 +53,8 @@ export default function RootLayout({
                   href: "/teachers",
                 },
                 {
-                  title: "TimeTable",
-                  href: "/teachers",
+                  title: "Timetable",
+                  href: "/timetable",
                 },
                 {
                   title: "Assignments",
@@ -61,28 +65,16 @@ export default function RootLayout({
                   href: "/classes",
                 },
                 {
+                  title: "Sections",
+                  href: "/sections",
+                },
+                {
                   title: "Subjects",
                   href: "/subjects",
                 },
                 {
-                  title: "Exam",
-                  href: "/exam",
-                },
-                {
-                  title: "Result",
-                  href: "/result",
-                },
-                {
-                  title: "Certificates",
-                  href: "/certificates",
-                },
-                {
-                  title: "Notes",
-                  href: "/notes",
-                },
-                {
-                  title: "Settings",
-                  href: "/notes",
+                  title: "Classmates",
+                  href: "/classmates",
                 },
               ]}
             />

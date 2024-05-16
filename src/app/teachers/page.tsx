@@ -1,10 +1,73 @@
+"use client";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { DataTableDemo } from "@/components/data-table";
 
 const Student = () => {
+  const [state, setState] = useState(false);
   return (
-    <div className="h-full w-full flex-1 flex justify-center items-center">
-      <Button>Add Teacher</Button>
+    <div className="h-full w-full flex-1 flex flex-col p-4">
+      <h1 className="text-4xl font-bold">Manage Teachers</h1>
+      <div className="h-14 w-full flex justify-end">
+        <Dialog open={state} onOpenChange={setState} modal={false}>
+          <DialogTrigger asChild>
+            <Button variant="outline" onClick={() => setState(true)}>
+              Add Teacher
+            </Button>
+          </DialogTrigger>
+          <DialogContent
+            className="sm:max-w-[425px]"
+            onPointerDownOutside={(e) => e.preventDefault()}
+          >
+            <DialogHeader>
+              <DialogTitle>Edit profile</DialogTitle>
+              <DialogDescription>
+                Make changes to your profile here.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="name" className="text-right">
+                  Name
+                </Label>
+                <Input
+                  id="name"
+                  defaultValue="Pedro Duarte"
+                  className="col-span-3"
+                />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="username" className="text-right">
+                  Username
+                </Label>
+                <Input
+                  id="username"
+                  defaultValue="@peduarte"
+                  className="col-span-3"
+                />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button type="submit" onClick={() => setState(false)}>
+                Save changes
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+      <DataTableDemo />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,41 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { useState } from "react";
-import { DeleteIcon, Trash2 } from "lucide-react";
 
-const data = [
-  {
-    subject: "Hindi",
-    subject_code: "HN",
-  },
-  {
-    subject: "English",
-    subject_code: "EN",
-  },
-];
-
-const Subject = () => {
+const Assignments = () => {
   const [state, setState] = useState(false);
-
-  const handleAddSubject = () => {
-    data.push({
-      subject: "New Subject",
-      subject_code: "NS",
-    });
-    setState(false);
-  };
-
   return (
-    <div className="h-full w-full flex-1 flex flex-col p-4">
-      <h1 className="text-4xl font-bold">Manage Subjects</h1>
+    <div className="p-4 flex-1 w-full h-full ">
+      <h1 className="text-4xl font-bold">Manage Assignments</h1>
       <div className="h-14 w-full flex justify-end ">
         <Dialog open={state} onOpenChange={setState} modal={false}>
           <DialogTrigger asChild>
@@ -77,34 +48,14 @@ const Subject = () => {
               </div>
             </div>
             <DialogFooter>
-              <Button type="submit" onClick={handleAddSubject}>
-                Save changes
-              </Button>
+              <Button type="submit">Save changes</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="grid grid-cols-3 gap-2">
-          {data.map((item) => (
-            <Card key={item.subject_code}>
-              <CardHeader>
-                <CardTitle>{item.subject}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <h1>Indal kumar</h1>
-              </CardContent>
-              <CardFooter className="flex justify-end">
-                <Button size="icon">
-                  <Trash2 />
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <h1>Assignments</h1>
     </div>
   );
 };
 
-export default Subject;
+export default Assignments;
