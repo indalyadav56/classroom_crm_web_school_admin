@@ -15,8 +15,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const router = useRouter();
   const formSchema = z.object({
     email: z.string().min(2, {
       message: "email must be at least 2 characters.",
@@ -36,6 +38,7 @@ const LoginForm = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log("data:->", values);
+    router.replace("/dashboard");
   }
 
   return (

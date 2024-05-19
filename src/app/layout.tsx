@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import Sidebar from "@/components/SideBar";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,58 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <>
-            <Sidebar
-              isCollapsed={false}
-              links={[
-                {
-                  title: "Dashboard",
-                  href: "/",
-                },
-                {
-                  title: "Students",
-                  href: "/students",
-                },
-                {
-                  title: "Attandences",
-                  href: "/attendences",
-                },
-                {
-                  title: "Parents",
-                  href: "/parents",
-                },
-                {
-                  title: "Teachers",
-                  href: "/teachers",
-                },
-                {
-                  title: "Timetable",
-                  href: "/timetable",
-                },
-                // {
-                //   title: "Assignments",
-                //   href: "/assignments",
-                // },
-                {
-                  title: "Classes",
-                  href: "/classes",
-                },
-                {
-                  title: "Sections",
-                  href: "/sections",
-                },
-                {
-                  title: "Subjects",
-                  href: "/subjects",
-                },
-                // {
-                //   title: "Classmates",
-                //   href: "/classmates",
-                // },
-              ]}
-            />
-            {children}
-          </>
+          {children}
         </ThemeProvider>
       </body>
     </html>
