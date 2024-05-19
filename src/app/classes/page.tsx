@@ -14,6 +14,16 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import React, { useState } from "react";
+import { EllipsisVertical, MenuIcon } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const StudentClass = () => {
   const [state, setState] = useState(false);
@@ -71,11 +81,23 @@ const StudentClass = () => {
           {Array.from({ length: 12 }, (_, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle>Class {index + 1}</CardTitle>
+                <div className="flex justify-between">
+                  <CardTitle>Class {index + 1}</CardTitle>
+
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className="ml-auto">
+                        <EllipsisVertical />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuCheckboxItem className="capitalize">
+                        test
+                      </DropdownMenuCheckboxItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </CardHeader>
-              <CardFooter>
-                <Button>Delete</Button>
-              </CardFooter>
             </Card>
           ))}
         </div>

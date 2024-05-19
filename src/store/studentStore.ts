@@ -1,3 +1,4 @@
+import { getAllStudents } from "@/api/studentApi";
 import { create } from "zustand";
 
 type Store = {
@@ -5,7 +6,7 @@ type Store = {
   addStudent: () => Promise<any>;
 };
 
-const useStudentStore = create<Store>()((set) => ({
+export const useStudentStore = create<Store>()((set) => ({
   getAllStudents: async () => {},
   addStudent: async () => {},
 }));

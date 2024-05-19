@@ -56,10 +56,10 @@ export default function RootLayout({
                   title: "Timetable",
                   href: "/timetable",
                 },
-                {
-                  title: "Assignments",
-                  href: "/assignments",
-                },
+                // {
+                //   title: "Assignments",
+                //   href: "/assignments",
+                // },
                 {
                   title: "Classes",
                   href: "/classes",
@@ -72,10 +72,10 @@ export default function RootLayout({
                   title: "Subjects",
                   href: "/subjects",
                 },
-                {
-                  title: "Classmates",
-                  href: "/classmates",
-                },
+                // {
+                //   title: "Classmates",
+                //   href: "/classmates",
+                // },
               ]}
             />
             {children}
