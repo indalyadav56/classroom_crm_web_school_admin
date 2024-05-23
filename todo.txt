@@ -4,3 +4,23 @@ teacher and student can login in school create subdomain website.
 only school admin can login in classroomcrm.com and manage school related all things and websites theme
 
 
+
+Themes store download and subdomain to school feature Description:-
+
+store themes in s3 bucket with general custom project base folder.
+one shoudl be default theme.
+
+once user/school admin selected custom theme it should download zip file (that contain index.html css)
+and upload to admin themees folder.
+And then admin click set theme so sub domain should be pointed to this s3 bucket
+
+
+
+steps to do this feature integrations:-
+download free html template for education school website from online.
+upload to s3 bucket and point to custom subdomain.
+
+
+create s3 bucket with same subdomain title.
+upload default theme to created bucket(or clone from default themes folder)
+point subdomain to s3 created bucket.

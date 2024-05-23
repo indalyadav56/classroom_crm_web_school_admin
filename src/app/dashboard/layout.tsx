@@ -36,10 +36,11 @@ const layout = ({ children }: any) => {
             href: "/dashboard/timetable",
             icon: Clock10,
           },
-          // {
-          //   title: "Assignments",
-          //   href: "/assignments",
-          // },
+          {
+            title: "Home Work",
+            href: "/dashboard/homework",
+            icon: Layout,
+          },
           {
             title: "Classes",
             href: "/dashboard/classes",
@@ -55,10 +56,21 @@ const layout = ({ children }: any) => {
             href: "/dashboard/subjects",
             icon: BookOpenCheck,
           },
-          // {
-          //   title: "Classmates",
-          //   href: "/classmates",
-          // },
+          {
+            title: "Fees",
+            href: "/dashboard/fees",
+            icon: BookOpenCheck,
+          },
+          {
+            title: "Website",
+            href: "/dashboard/website",
+            icon: BookOpenCheck,
+          },
+          {
+            title: "Themes",
+            href: "/dashboard/themes",
+            icon: BookOpenCheck,
+          },
         ]}
       />
       {children}
