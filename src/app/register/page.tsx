@@ -8,10 +8,10 @@ const page = () => {
     <div className="flex h-screen w-screen justify-center items-center">
       <Card className="w-1/4">
         <CardHeader>
-          <span className="text-3xl">Login</span>
+          <span className="text-3xl">Register</span>
         </CardHeader>
         <CardContent>
-          <LoginForm />
+          <RegisterForm />
         </CardContent>
       </Card>
     </div>

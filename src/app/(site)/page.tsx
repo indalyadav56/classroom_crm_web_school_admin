@@ -1,11 +1,13 @@
 import React from "react";
 
-const Dashboard = () => {
+const HomePage = () => {
   return (
-    <div>
-      <h1>Main Site</h1>
+    <div className="w-full flex-1 flex justify-center items-center">
+      <h1 className="text-8xl font-bold">
+        Empower your <br /> school management
+      </h1>
     </div>
   );
 };
 
-export default Dashboard;
+export default HomePage;
