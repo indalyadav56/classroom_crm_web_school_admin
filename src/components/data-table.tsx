@@ -445,7 +445,7 @@ export function DataTableDemo() {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
-                  onClick={() => router.push(`/parents/${row.id}`)}
+                  onClick={() => router.push(`/dashboard/parents/${row.id}`)}
                   className="cursor-pointer"
                 >
                   {row.getVisibleCells().map((cell) => (

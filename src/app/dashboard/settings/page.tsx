@@ -11,11 +11,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Subscription from "@/components/SubscriptionPlan";
 
 const Settings = () => {
   return (
     <div className="h-full w-full flex-1  flex flex-col p-4">
-      <h1>Settings</h1>
+      <h1 className="text-4xl">Settings</h1>
 
       <h2>Setup stripe account for school</h2>
 
@@ -29,14 +30,11 @@ export default Settings;
 export function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-full">
-      <TabsList className="grid w-full grid-cols-5">
+      <TabsList className="grid w-full grid-cols-12 bg-transparent">
         <TabsTrigger value="account" className="">
           Account
         </TabsTrigger>
         <TabsTrigger value="subscription">Subscription</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
-        <TabsTrigger value="password2">Password</TabsTrigger>
-        <TabsTrigger value="password3">Password</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>
@@ -61,28 +59,8 @@ export function TabsDemo() {
           </CardFooter>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
-        <Card>
-          <CardHeader>
-            <CardTitle>Password</CardTitle>
-            <CardDescription>
-              Change your password here. After saving
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button>Save password</Button>
-          </CardFooter>
-        </Card>
+      <TabsContent value="subscription">
+        <Subscription />
       </TabsContent>
     </Tabs>
   );
